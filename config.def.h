@@ -65,25 +65,25 @@ static const char unknown_str[] = "na";
  */
 static const struct arg args[] = {
     /* function format          argument */
-    { netspeed_rx,          "%s/",              "wlan0" },
-    { netspeed_tx,          "%s ",              "wlan0" },
-    { wifi_essid,           " %s ",            "wlan0" },
-    { wifi_perc,            "%s%% ",            "wlan0" },
-    
-    // { run_command,          " %s",
-    // "pulsemixer --get-volume | awk '{print int(($1 + $2) / 2)}'" },
-    // { run_command,          "%s ",
-    // "pulsemixer --get-mute | awk '{if ($1 == 1) print \"m\"}'" },
-
-    // { vol_perc,             " %s ",            "/dev/mixer" },
-    { cpu_perc,             " %s%% ",          NULL },
-    {battery_state,         "%s",               "BAT0"},
-    { battery_perc,         " %s%% ",          "BAT0" },
-    { battery_remaining,    "%s ",              "BAT0" },
-    {keymap,                "%s ",            NULL},
-    {datetime,              "%s",               "%F %I:%M %p"},
+    {keymap, ";", ""},
+    {netspeed_rx, "%s/", "wlan0"},
+    {netspeed_tx, "%s ", "wlan0"},
+    {wifi_perc, "%s%% ", "wlan0"},
+    {wifi_essid, " %s ", "wlan0"},
+    {cpu_perc, " %s%% ", NULL},
+    {battery_state, "%s", "BAT0"},
+    {battery_perc, " %s%% ", "BAT0"},
+    {battery_remaining, "%s ", "BAT0"},
+    {keymap, "%s ", NULL},
+    {datetime, "%s", "%F %I:%M %p"},
 
 };
+
+// { run_command,          " %s",
+// "pulsemixer --get-volume | awk '{print int(($1 + $2) / 2)}'" },
+// { run_command,          "%s ",
+// "pulsemixer --get-mute | awk '{if ($1 == 1) print \"m\"}'" },
+// { vol_perc,             " %s ",            "/dev/mixer" },
 
 // static const struct arg args[] = {
 //         /* function format          argument */
